@@ -6,7 +6,7 @@ require '../functions.php';
 
 class Functions extends TestCase
 {
-    public function testDisplayArtworks_success()
+    public function testDisplayArtworks_success1()
     {
         $data = [['id'=>1, 'title'=>'Blue Sky', 'artist'=>'Blobby', 'movement'=>'realism', 'year'=>1994],['id'=>2, 'title'=>'Red Sky', 'artist'=>'Rocky', 'movement'=>'surrealism', 'year'=>1995]];
         $result = displayArtworks($data);
