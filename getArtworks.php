@@ -9,9 +9,3 @@ function getArtworks()
     $artworks = $query->fetchAll();
     return $artworks;
 }
-
-$artworks = getArtworks();
-
-echo '<pre>';
-var_dump($artworks);
-echo '</pre>';
