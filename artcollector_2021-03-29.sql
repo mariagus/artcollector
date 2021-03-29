@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
 # Database: artcollector
-# Generation Time: 2021-03-29 10:56:55 +0000
+# Generation Time: 2021-03-29 15:48:03 +0000
 # ************************************************************
 
 
@@ -32,17 +32,18 @@ CREATE TABLE `artworks` (
   `artist` varchar(50) DEFAULT NULL,
   `movement` varchar(50) DEFAULT NULL,
   `year` year(4) DEFAULT NULL,
+  `image` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `artworks` WRITE;
 /*!40000 ALTER TABLE `artworks` DISABLE KEYS */;
 
-INSERT INTO `artworks` (`id`, `title`, `artist`, `movement`, `year`)
+INSERT INTO `artworks` (`id`, `title`, `artist`, `movement`, `year`, `image`)
 VALUES
-	(1,'Composition X','Wassily Kandinsky','Abstract','1939'),
-	(2,'Self-portrait','Kazimir Malevich','Fauvism','1910'),
-	(3,'Villica safe','Francis Picabia','Surrealism','1929');
+	(1,'Composition X','Wassily Kandinsky','Abstract','1939',NULL),
+	(2,'Self-portrait','Kazimir Malevich','Fauvism','1910','https://www.wikiart.org/en/kazimir-malevich/self-portrait-1910'),
+	(3,'Villica safe','Francis Picabia','Surrealism','1929',NULL);
 
 /*!40000 ALTER TABLE `artworks` ENABLE KEYS */;
 UNLOCK TABLES;
