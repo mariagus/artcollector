@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+h1 {
+    text-align: center;
+    padding: 3%;
+    background: #1c1c1c;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+}
+
+.container {
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.artworks {
+    padding: 2%;
+    text-align: center;
+}
