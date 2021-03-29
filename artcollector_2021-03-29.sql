@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
 # Database: artcollector
-# Generation Time: 2021-03-29 10:46:37 +0000
+# Generation Time: 2021-03-29 10:56:55 +0000
 # ************************************************************
 
 
@@ -28,9 +28,9 @@ DROP TABLE IF EXISTS `artworks`;
 
 CREATE TABLE `artworks` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(20) DEFAULT NULL,
-  `artist` varchar(20) DEFAULT NULL,
-  `movement` varchar(20) DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `artist` varchar(50) DEFAULT NULL,
+  `movement` varchar(50) DEFAULT NULL,
   `year` year(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
