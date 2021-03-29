@@ -1,5 +1,5 @@
 <h1>Art Collector App</h1>
-
+<body>
 <?php
 
 require "getArtworks.php";
@@ -17,7 +17,8 @@ function displayArtworks()
     }
     return $return;
     '</div>';
-
 }
 
 echo displayArtworks();
+?>
+</body>
