@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
 # Database: artcollector
-# Generation Time: 2021-03-29 10:35:12 +0000
+# Generation Time: 2021-03-29 10:46:37 +0000
 # ************************************************************
 
 
@@ -31,7 +31,7 @@ CREATE TABLE `artworks` (
   `title` varchar(20) DEFAULT NULL,
   `artist` varchar(20) DEFAULT NULL,
   `movement` varchar(20) DEFAULT NULL,
-  `year` int(11) DEFAULT NULL,
+  `year` year(4) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -40,9 +40,9 @@ LOCK TABLES `artworks` WRITE;
 
 INSERT INTO `artworks` (`id`, `title`, `artist`, `movement`, `year`)
 VALUES
-	(1,'Composition X','Wassily Kandinsky','Abstract',1939),
-	(2,'Self-portrait','Kazimir Malevich','Fauvism',1910),
-	(3,'Villica safe','Francis Picabia','Surrealism',1929);
+	(1,'Composition X','Wassily Kandinsky','Abstract','1939'),
+	(2,'Self-portrait','Kazimir Malevich','Fauvism','1910'),
+	(3,'Villica safe','Francis Picabia','Surrealism','1929');
 
 /*!40000 ALTER TABLE `artworks` ENABLE KEYS */;
 UNLOCK TABLES;
