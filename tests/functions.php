@@ -19,4 +19,9 @@ class Functions extends TestCase
         $result = displayArtworks($data);
         $this->assertEquals($result, $output);
     }
+    public function testDisplayArtworks_malformed()
+    {
+        $this->expectException(TypeError::class);
+        displayArtworks(4);
+    }
 }
