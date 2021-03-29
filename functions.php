@@ -29,7 +29,6 @@ function displayArtworks(array $data) : string
         $return .= '<h3>Artist: ' . $artwork['artist'] . '</h3>';
         $return .= '<h4>Movement: ' . $artwork['movement'] . '</h4>';
         $return .= '<h4>Year: ' . $artwork['year'] . '</h4>' . '<br/>';
-
     }
     return $return;
     '</div>';
