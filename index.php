@@ -1,8 +1,9 @@
+<html>
 <head>
     <link rel="stylesheet" href="style.css">
 </head>
-<h1>Art Collector App</h1>
 <body>
+<h1>Art Collector App</h1>
 <section class="container">
 
 <?php
@@ -16,3 +17,4 @@ echo displayArtworks($artworks);
 
 </section>
 </body>
+</html>
