@@ -7,7 +7,10 @@
 
 <?php
 require "functions.php";
-$artworks = getArtworks();
+require "connectToDb.php";
+
+$db = getDB();
+$artworks = getArtworks($db);
 echo displayArtworks($artworks);
 ?>
 
