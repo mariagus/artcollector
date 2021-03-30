@@ -43,7 +43,7 @@ function displayArtworks(array $data) : string
  * @return string
  */
 
-function cleanupInput(string $string) :string
+function validateText(string $string) :string
 {
     $string = trim($string);
     return preg_replace('/[^A-Za-z0-9\-]/', '', $string);

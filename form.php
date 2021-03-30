@@ -10,11 +10,11 @@ if (count($_POST) === 5) {
     }
     $db = getDb();
 
-    $title = $_POST['title'];
-    $artist = $_POST['artist'];
-    $movement = $_POST['movement'];
-    $year = $_POST['year'];
-    $image = $_POST['image'];
+    $title = validateText($_POST['title']);
+    $artist = validateText($_POST['artist']);
+    $movement = validateText($_POST['movement']);
+    $year = validateText($_POST['year']);
+    $image = validateText($_POST['image']);
 
     $artwork = insertArtwork($db, $title, $artist, $movement, $year, $image);
     header("Location: index.php");
