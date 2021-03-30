@@ -15,6 +15,7 @@
         <input type="submit" />
     </form>
 <?php
+
 if (isset($_GET['error'])) {
     echo '<p>Please fill in all fields!</p>';
 }
