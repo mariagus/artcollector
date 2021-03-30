@@ -12,6 +12,13 @@
     Image link: <input type="url" name="image" />
     <input type="submit" />
 </form>
+
+<?php
+if (isset($_GET['error'])) {
+    echo '<p>Please fill in all fields!</p>';
+}
+?>
+
 <section class="container">
 
 <?php
@@ -26,3 +33,4 @@ echo displayArtworks($artworks);
 </section>
 </body>
 </html>
+

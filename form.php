@@ -4,8 +4,11 @@ require_once 'connectToDb.php';
 require_once 'functions.php';
 
 if (count($_POST) === 5) {
+    if (array_search('', $_POST)) {
+        header('Location: index.php?error=Registration%20failed');
+        exit;
+    }
     $db = getDb();
-
 
     $title = $_POST['title'];
     $artist = $_POST['artist'];
@@ -15,6 +18,7 @@ if (count($_POST) === 5) {
 
     $artwork = insertArtwork($db, $title, $artist, $movement, $year, $image);
     header("Location: index.php");
+    exit;
 }
 
 /*
