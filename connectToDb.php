@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * function getDB
+ *
+ */
+
 function getDB()
 {
     $db = new PDO('mysql:host=db;dbname=artcollector', 'root', 'password');
