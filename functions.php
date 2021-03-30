@@ -1,14 +1,13 @@
 <?php
-require "connectToDb.php";
 
 /*
  * function getArtworks
+ * @params database
  * returns an array of the artworks
  */
 
-function getArtworks() : array
+function getArtworks(object $db) : array
 {
-    $db = getDB();
     $query = $db->prepare('SELECT * FROM `artworks`;');
     $query->execute();
     return $query->fetchAll();
@@ -22,6 +21,9 @@ function getArtworks() : array
 
 function displayArtworks(array $data) : string
 {
+    if (empty($data)){
+        die("ERROR: no data available");
+    }
     $return = '';
     foreach ($data as $artwork){
         $return .= '<div class="artworks">';
