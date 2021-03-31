@@ -26,13 +26,16 @@ function displayArtworks(array $data) : string
     }
     $return = '';
     foreach ($data as $artwork){
-        $return .= '<div class="artworks">';
-        $return .= '<img src="' . $artwork['image'] . '" height="250" />';
-        $return .= '<h2>Title: ' . $artwork['title'] . '</h2>';
-        $return .= '<h3>Artist: ' . $artwork['artist'] . '</h3>';
-        $return .= '<h4>Movement: ' . $artwork['movement'] . '</h4>';
-        $return .= '<h4>Year: ' . $artwork['year'] . '</h4>';
-        $return .= '</div>';
+        if (!$artwork['deleted']) {
+            $return .= '<div class="artworks" >';
+            $return .= '<img src="' . $artwork['image'] . '" height="250" />';
+            $return .= '<h2>Title: ' . $artwork['title'] . '</h2>';
+            $return .= '<h3>Artist: ' . $artwork['artist'] . '</h3>';
+            $return .= '<h4>Movement: ' . $artwork['movement'] . '</h4>';
+            $return .= '<h4>Year: ' . $artwork['year'] . '</h4>';
+            $return .= '<form action="delete.php" method="post"><input name="delete" type="submit" value="delete"><input type="hidden" value="' . $artwork['id'] . '" name="id"></form>';
+            $return .= '</div>';
+        }
     }
     return $return;
 }
@@ -49,3 +52,11 @@ function validateText(string $string) :string
     return preg_replace('/[^A-Za-z0-9\-\s]/', '', $string);
 }
 
+
+function deleteArtwork(PDO $db) :bool
+{
+    $query = $db->prepare('UPDATE `artworks` SET `deleted` = 1 WHERE `id` = :id');
+    $query->bindParam('id', $_POST['id']);
+    $query->execute();
+    return true;
+}
