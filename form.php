@@ -23,9 +23,7 @@ if (count($_POST) === 5) {
 
 /*
  * Inserts a new artwork into the DB
- *
  * @params PDO $db, string $title, string $artist, string $movement, int $year, $string image
- *
  * @return bool
  */
 function insertArtwork(PDO $db, string $title, string $artist, string $movement, int $year, string $image) :bool
