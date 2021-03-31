@@ -6,6 +6,7 @@ body {
 }
 
 h1 {
+    margin: 0;
     text-align: center;
     padding: 3%;
     background: #1c1c1c;
@@ -15,9 +16,11 @@ h1 {
 label {
     margin: 0.5rem;
     font-size: 1.2rem;
+    display: block;
 }
 
 input {
+    text-align: center;
     border: solid 0.1rem lightgrey ;
 }
 
@@ -30,10 +33,19 @@ a {
     border: #a52a2a 1px solid;
 }
 
-.form {
+form {
     text-align: center;
     margin-left: 3%;
     margin-right: 3%;
+    padding: 2%;
+}
+
+.form {
+    padding: 2%;
+}
+
+h3 {
+    text-align: center;
 }
 
 .submit {
@@ -48,9 +60,11 @@ a {
 
 .container {
     margin: 2%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-evenly;*/
 }
 
 .artworks {
@@ -61,4 +75,18 @@ a {
 .warning {
     color: #ff0000;
     font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }

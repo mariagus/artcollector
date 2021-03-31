@@ -42,5 +42,4 @@ class Functions extends TestCase
         $this->expectException(TypeError::class);
         validateText([1,2,3]);
     }
-
 }
