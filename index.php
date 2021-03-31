@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Art Collector App</title>
     <link rel="stylesheet" href="style.css">
