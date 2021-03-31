@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
     <title>Art Collector App</title>
     <link rel="stylesheet" href="style.css">
