@@ -52,6 +52,11 @@ function validateText(string $string) :string
     return preg_replace('/[^A-Za-z0-9\-\s]/', '', $string);
 }
 
+/*
+ * function deleteArtwork
+ * @params PDO database
+ * @returns bool
+ */
 
 function deleteArtwork(PDO $db) :bool
 {
