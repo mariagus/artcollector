@@ -31,7 +31,7 @@ CREATE TABLE `artworks` (
   `title` varchar(50) DEFAULT NULL,
   `artist` varchar(50) DEFAULT NULL,
   `movement` varchar(50) DEFAULT NULL,
-  `year` year(4) DEFAULT NULL,
+  `year` int(4) DEFAULT NULL,
   `image` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

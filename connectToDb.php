@@ -2,10 +2,10 @@
 
 /*
  * function getDB
- *
+ * @returns PDO
  */
 
-function getDB()
+function getDB() :PDO
 {
     try {
         $db = new PDO('mysql:host=db;dbname=artcollector', 'root', 'password');
