@@ -24,4 +24,23 @@ class Functions extends TestCase
         $this->expectException(TypeError::class);
         displayArtworks(4);
     }
+
+    public function testValidateText_success1()
+    {
+        $data = ' £./hello> ';
+        $output = 'hello';
+        $result = validateText($data);
+        $this->assertEquals($result, $output);
+    }
+    public function testValidateText_success2()
+    {
+        $result = validateText('.cool');
+        $this->assertIsString($result);
+    }
+    public function testValidateText_malformed()
+    {
+        $this->expectException(TypeError::class);
+        validateText([1,2,3]);
+    }
+
 }
