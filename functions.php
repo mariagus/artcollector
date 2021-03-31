@@ -31,7 +31,7 @@ function displayArtworks(array $data) : string
             $return .= '<h2>Title: ' . $artwork['title'] . '</h2>';
             $return .= '<h3>Artist: ' . $artwork['artist'] . '</h3>';
             $return .= '<h3>Movement: ' . $artwork['movement'] . '</h3>';
-            $return .= '<h4>Year: ' . $artwork['year'] . '</h4>';
+            $return .= '<h3>Year: ' . $artwork['year'] . '</h3>';
             $return .= '<a href="delete.php?id=' . $artwork['id'] . '">delete</a>';
             $return .= '</div>';
 
@@ -64,3 +64,4 @@ function deleteArtwork(PDO $db) :bool
     $query->execute();
     return true;
 }
+

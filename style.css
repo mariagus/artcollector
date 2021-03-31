@@ -23,10 +23,11 @@ input {
 
 a {
     padding: 0.4rem;
+    margin: 4rem;
     text-decoration: none;
-    color: brown;
+    color: #a52a2a;
     font-size: 1.2rem;
-    border: brown 1px solid;
+    border: #a52a2a 1px solid;
 }
 
 .form {

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-</body>
-</html>
 <h1>Art Collector App</h1>
 <div class="form">
 <h3>Add Artwork: </h3>
