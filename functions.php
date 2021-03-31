@@ -26,7 +26,7 @@ function displayArtworks(array $data) : string
     }
     $return = '';
     foreach ($data as $artwork){
-        if (!$artwork['deleted']) {
+        if ($artwork['deleted'] == 0) {
             $return .= '<div class="artworks">';
             $return .= '<img src="' . $artwork['image'] . '" height="250" />';
             $return .= '<h2>Title: ' . $artwork['title'] . '</h2>';
