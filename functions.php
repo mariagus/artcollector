@@ -33,7 +33,7 @@ function displayArtworks(array $data) : string
             $return .= '<h3>Artist: ' . $artwork['artist'] . '</h3>';
             $return .= '<h4>Movement: ' . $artwork['movement'] . '</h4>';
             $return .= '<h4>Year: ' . $artwork['year'] . '</h4>';
-            $return .= '<form action="delete.php" method="post"><input name="delete" type="submit" value="delete"><input type="hidden" value="' . $artwork['id'] . '" name="id"></form>';
+            $return .= '<a href="delete.php?id=' . $artwork['id'] . '">delete</a>';
             $return .= '</div>';
         }
     }
@@ -61,7 +61,7 @@ function validateText(string $string) :string
 function deleteArtwork(PDO $db) :bool
 {
     $query = $db->prepare('UPDATE `artworks` SET `deleted` = 1 WHERE `id` = :id');
-    $query->bindParam('id', $_POST['id']);
+    $query->bindParam('id', $_GET['id']);
     $query->execute();
     return true;
 }
