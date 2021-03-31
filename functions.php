@@ -36,3 +36,16 @@ function displayArtworks(array $data) : string
     }
     return $return;
 }
+
+/*
+ * function validateInput
+ * @params string $input
+ * @return string
+ */
+
+function validateText(string $string) :string
+{
+    $string = trim($string);
+    return preg_replace('/[^A-Za-z0-9\-\s]/', '', $string);
+}
+
