@@ -37,3 +37,4 @@ function insertArtwork(PDO $db, string $title, string $artist, string $movement,
     $query->execute();
     return true;
 }
+

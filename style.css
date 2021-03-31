@@ -12,10 +12,6 @@ h1 {
     color: #fff;
 }
 
-h3 {
-    font-size: 1.3rem;
-}
-
 label {
     margin: 0.5rem;
     font-size: 1.2rem;
@@ -23,6 +19,15 @@ label {
 
 input {
     border: solid 0.1rem lightgrey ;
+}
+
+a {
+    padding: 0.4rem;
+    margin: 4rem;
+    text-decoration: none;
+    color: #a52a2a;
+    font-size: 1.2rem;
+    border: #a52a2a 1px solid;
 }
 
 .form {
