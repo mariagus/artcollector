@@ -8,7 +8,7 @@
 
 function getArtworks(object $db) : array
 {
-    $query = $db->prepare('SELECT * FROM `artworks`;');
+    $query = $db->prepare('SELECT * FROM `artworks` WHERE `deleted` = 0;');
     $query->execute();
     return $query->fetchAll();
 }
@@ -25,8 +25,7 @@ function displayArtworks(array $data) : string
         die("ERROR: no data available");
     }
     $return = '';
-    foreach ($data as $artwork){
-        if ($artwork['deleted'] == 0) {
+    foreach ($data as $artwork) {
             $return .= '<div class="artworks">';
             $return .= '<img src="' . $artwork['image'] . '" height="250" />';
             $return .= '<h2>Title: ' . $artwork['title'] . '</h2>';
@@ -35,7 +34,7 @@ function displayArtworks(array $data) : string
             $return .= '<h4>Year: ' . $artwork['year'] . '</h4>';
             $return .= '<a href="delete.php?id=' . $artwork['id'] . '">delete</a>';
             $return .= '</div>';
-        }
+
     }
     return $return;
 }
